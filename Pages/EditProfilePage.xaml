@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="HelloUWP.Pages.EditProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloUWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Margin="20">
+        <TextBlock Text="My profile" Style ="{StaticResource FormHeading}"/>
+        <StackPanel Style ="{StaticResource FormGroup}">
+            <TextBlock Text="First Name: " Style="{StaticResource FormLabel}"/>
+            <TextBox x:Name="firstName"/>
+        </StackPanel>
+        <StackPanel Style ="{StaticResource FormGroup}">
+            <TextBlock Text="Last Name: " Style="{StaticResource FormLabel}"/>
+            <TextBox x:Name="lastName"/>
+        </StackPanel>
+        <StackPanel Style ="{StaticResource FormGroup}">
+            <TextBlock Text="Email: " Style="{StaticResource FormLabel}"/>
+            <TextBox x:Name="email"/>
+        </StackPanel>
+        <StackPanel Style ="{StaticResource FormGroup}">
+            <TextBlock Text="Address: " Style="{StaticResource FormLabel}"/>
+            <TextBox x:Name="address"/>
+        </StackPanel>
+        <StackPanel Style ="{StaticResource FormGroup}">
+            <TextBlock Text="Phone: " Style="{StaticResource FormLabel}"/>
+            <TextBox x:Name="phone"/>
+        </StackPanel>
+        <StackPanel Style ="{StaticResource FormGroup}">
+            <TextBlock Text="Avatar: " Style="{StaticResource FormLabel}"/>
+            <Image Width="200" x:Name="avatar"/>
+        </StackPanel>
+        <StackPanel Style ="{StaticResource FormGroup}">
+            <TextBlock Text="Gender: " Style="{StaticResource FormLabel}"/>
+            <TextBox x:Name="gender"/>
+        </StackPanel>
+        <StackPanel Style ="{StaticResource FormGroup}">
+            <TextBlock Text="Birthday: " Style="{StaticResource FormLabel}"/>
+            <TextBox x:Name="birthday"/>
+        </StackPanel>
+        <!--<StackPanel Style ="{StaticResource FormGroup}">
+            <TextBlock Text="Created At: " Style="{StaticResource FormLabel}"/>
+            <TextBlock x:Name="createdAt"/>
+        </StackPanel>
+        <StackPanel Style ="{StaticResource FormGroup}">
+            <TextBlock Text="Updated At: " Style="{StaticResource FormLabel}"/>
+            <TextBlock x:Name="updatedAt"/>
+        </StackPanel>
+        <StackPanel Style ="{StaticResource FormGroup}">
+            <TextBlock Text="Introduction: " Style="{StaticResource FormLabel}"/>
+            <TextBox x:Name="introduction"/>
+        </StackPanel>-->
+        <StackPanel Style ="{StaticResource FormGroup}">
+            <TextBlock Text="Status: " Style="{StaticResource FormLabel}"/>
+            <TextBox x:Name="status"/>
+        </StackPanel>
+        <Button Content="Update"  Margin="150 0 0 0" Click="UpdateProfile_ButtonClick"/>
+    </StackPanel>
+</Page>

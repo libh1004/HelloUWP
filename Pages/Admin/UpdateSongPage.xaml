@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="HelloUWP.Pages.Admin.UpdateSongPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloUWP.Pages.Admin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <Grid Width="1349">
+            <TextBlock HorizontalAlignment="Left" Margin="380,50,0,0" Text="Update song" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="34" FontSize="20"/>
+            <TextBlock HorizontalAlignment="Left" Margin="70,100,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="70,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="735"/>
+            <TextBlock HorizontalAlignment="Left" Margin="70,170,0,0" Text="Singer" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtSinger" HorizontalAlignment="Left" Margin="70,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="340"/>
+            <TextBlock HorizontalAlignment="Left" Margin="465,170,0,0" Text="Author" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtAuthor" HorizontalAlignment="Left" Margin="465,190,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="340"/>
+            <TextBlock HorizontalAlignment="Left" Margin="70,380,0,0" Text="Description" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtThumbnail" HorizontalAlignment="Left" Margin="70,260,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" Height="100"/>
+            <TextBlock Text="Link" HorizontalAlignment="Left" Margin="465,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtLink" HorizontalAlignment="Left" Margin="465,260,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" Height="100"/>
+            <TextBlock HorizontalAlignment="Left" Margin="70,240,0,0" Text="Thumbnail" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtDescription" HorizontalAlignment="Left" Margin="70,400,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="340"/>
+            <TextBlock Text="Message" HorizontalAlignment="Left" Margin="465,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Margin="465,400,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="340"/>
+            <Button Click="Update_ButtonClick" Content="Update" Margin="360,500,0,0" VerticalAlignment="Top" Width="170"/>
+        </Grid>
+    </StackPanel>
+</Page>

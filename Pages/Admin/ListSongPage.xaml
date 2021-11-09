@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="HelloUWP.Pages.Admin.ListSongPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:entities="using:HelloUWP.Entities"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:Key="ContactListViewTemplate" x:DataType="entities:Song">
+            <Grid Margin="0,12,0,12" AutomationProperties.Name="{x:Bind id}" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" MinWidth="150"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image>
+                    <Image.Source>
+                        <BitmapImage UriSource="{x:Bind thumbnail}" DecodePixelWidth="100"/>
+                    </Image.Source>
+                </Image>
+                <ListView Margin="12,0,0,0" Grid.Column="1" IsItemClickEnabled="True">
+                    <TextBlock Text="{x:Bind name}" FontSize="14" FontWeight="SemiBold" Style="{ThemeResource BaseTextBlockStyle}"
+                        HorizontalAlignment="Left" Margin="0,0,0,6" LineHeight="20"/>
+                    <TextBlock Text="{x:Bind singer}" FontSize="14" FontWeight="SemiBold" Style="{ThemeResource BaseTextBlockStyle}"
+                        HorizontalAlignment="Left" Margin="0,0,0,6" LineHeight="20"/>
+                    <Button Click="EditSong_ButtonClick" Tag="{x:Bind id}" IsTapEnabled="True" Content="Edit"></Button>
+                    <Button Click="DeleteSong_ButtonClick" Tag="{x:Bind id}" IsTapEnabled="True" Content="Delete"></Button>
+                </ListView>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    <StackPanel>
+        <ListView x:Name="ListSong"
+                  IsItemClickEnabled="True"
+                  SelectionMode="Single"
+                  SelectionChanged="ListSong_SelectionChanged"
+                  ItemTemplate="{StaticResource ContactListViewTemplate}"/>
+        <MediaPlayerElement x:Name="MyMediaPlayer" AreTransportControlsEnabled="True" AutoPlay="False">
+        </MediaPlayerElement>
+        <Button Click="Previous_ButtonClick" IsTapEnabled="True" Background="White" Margin="380,-55,0,0">
+            <SymbolIcon Symbol="Previous"></SymbolIcon>
+        </Button>
+        <Button Click="Next_ButtonClick" IsTapEnabled="True" Background="White" Margin="530,-55,0,0">
+            <SymbolIcon Symbol="Next"></SymbolIcon>
+        </Button>
+    </StackPanel>
+</Page>
